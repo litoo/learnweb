@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    Vue<input type="text" v-on:keydown="fun($event)">
+    传统JS<input type="text" onkeydown="fun1()"/>
+</div>
+</body>
+<script>
+    // 传统js
+    // function fun1(){
+    //     fundefault()
+    // }
+    // vue
+    new Vue({
+        el: "#app",
+        methods: {
+            fun: function (event) {
+                // if (event.keyCode < 48 || event.keyCode > 57) {
+                    event.preventDefault();//按键不生效
+                // }
+            }
+        }
+    })
+
+    // function fundefault() {
+    //     if (event.keyCode < 48 || event.keyCode > 57) {
+    //         event.preventDefault();//按键不生效
+    //     }
+    // }
+</script>
+</html>
