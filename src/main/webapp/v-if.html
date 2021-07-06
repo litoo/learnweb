@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <p v-if="seen">显示隐藏</p>
+</div>
+
+<script>
+  new Vue({
+    el:"#app",
+    data:{
+      seen:false//隐藏
+    }
+  })
+</script>
+</body>
+</html>

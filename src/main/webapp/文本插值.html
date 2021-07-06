@@ -6,8 +6,8 @@
     <script src="js/vuejs-2.5.16.js"></script>
 </head>
 <body>
-<div id="app">
-<!--  VUE插值表达式，双大括号-->
+<div id="app" v-once>
+<!--  VUE插值表达式，双大括号 v-once表示只改一次，值不再变化-->
   {{message}}
 </div>
 </body>

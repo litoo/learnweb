@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v指令</title>
+  <script src="js/vuejs-2.5.16.js"></script>
+</head>
+
+<body>
+<div id="app">
+<!--  使用html不能使用文本插值{{}}，要使用v-html -->
+  <p v-html="rawType">v-html使用</p>
+
+</div>
+
+<script>
+  new Vue({
+    el:"#app",
+    data:{
+      rawType:'<span style="color: red">红色字体</span>',
+    }
+  })
+</script>
+
+
+</body>
+</html>

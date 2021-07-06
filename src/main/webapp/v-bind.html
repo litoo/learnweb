@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <!--  动态绑定属性，v-bind:属性名称="属性变量"-->
+    <p v-bind:class="classId">v-bind指令</p>
+
+    <a v-bind:href="url">a标签跳转</a>
+</div>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            classId:"p-bind",
+            url:'https://www.baidu.com'
+        }
+    })
+</script>
+
+<style>
+    /*类选择器，配合动态class属性*/
+    .p-bind{
+        color: gray;
+    }
+</style>
+</body>
+</html>

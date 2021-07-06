@@ -9,8 +9,15 @@
 
 <div id="app">
     {{ message }}
-    <button type="button" v-on:click="fun1('sss')">点击改变</button>
+<!--    <button type="button" v-on:click.stop="click1('sss')">点击改变</button>-->
+<!--    click.stop消费事件，阻断往父控件传递-->
+    <div @click="click1('外层')">
+        <div @click.stop="click2('内层')">
+            click区域
+        </div>
+    </div>
 </div>
+
 </body>
 <script>
     new Vue({
@@ -19,7 +26,10 @@
             message: "哈哈"
         },
         methods: {
-            fun1: function (msg) {
+            click1: function (msg) {
+                this.message = msg
+            },
+            click2: function (msg) {
                 this.message = msg
             }
         }
